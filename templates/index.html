@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Plain Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>The Plain Blog</h1></div>
+    </div>
+    {% for each_post in all_posts: %}
+        <div class="content">
+            <div class="card">
+                <h2>{{ each_post.title }}</h2>
+                <p class="text">{{ each_post.subtitle }}</p>
+                <a href="{{ url_for('show_post', index=each_post.id) }}">Read</a>
+            </div>
+        </div>
+    {% endfor %}
+
+
+    <!--
+        {% for blog_post in posts: %}
+        {% if blog_post['id'] == 2: %}
+            <H1>{{ blog_post["title"] }}</H1>
+            <H2>{{ blog_post["subtitle"] }}</H2>
+        {% endif %}
+    {% endfor %}
+
+
+    <div class="content">
+        <div class="card">
+            <h2>Another blog post</h2>
+            <p class="text">Lorem ipsum dolor sit </p>
+            <a href="#">Read</a>
+        </div>
+    </div>
+    -->
+
+</div>
+</body>
+<footer>
+    <p>&copy; {{current_year}} | Dev - Adewale</p>
+</footer>
+</html>

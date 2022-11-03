@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>The Plain Blog</h1></div>
+    </div>
+
+        <div class="content">
+            <div class="card">
+                <h1>{{ the_post.title }}</h1>
+                <h2>{{ the_post.subtitle }}</h2>
+                <p>{{ the_post.body }}</p>
+            </div>
+        </div>
+
+</div>
+</body>
+<footer>
+    <p>&copy; {{current_year}} | Dev - Adewale</p>
+</footer>
+</html>
